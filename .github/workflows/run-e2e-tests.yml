@@ -29,4 +29,4 @@ jobs:
       - run: npm run test:e2e
         env:
           JWT_SECRET: run-e2e-tests
-          DATABASE_URL: "postgresql://docker:docker@localhost:5432/api-solid?schema=public"
+          DATABASE_URL: ${{ secrets.CI_DATABASE_URL }}
